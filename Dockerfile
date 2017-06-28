@@ -238,31 +238,31 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/cli/php.ini && \
     echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/fpm/php.ini
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-    apt-get install nodejs && \
-    apt-get -y autoremove && \
-    apt-get -y clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/*
+#RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+#    apt-get install nodejs && \
+#    apt-get -y autoremove && \
+#    apt-get -y clean && \
+#    rm -rf /var/lib/apt/lists/* && \
+#    rm -rf /tmp/*
 
-#  --unsafe-perm work around for npm bug
-RUN npm install --unsafe-perm -g \
-      @angular/cli \
-      azure-cli \
-      babel-cli bower browser-sync \
-      cordova cordova-check-plugins \
-      firebase-tools fuse \
-      http-server \
-      iconv-lite \
-      nodemon npm-check-updates node-gyp \
-      sass-lint \
-      semver \
-      tslint typings typescript \
-      uglify-js \
-      webpack webpack-dev-server \
-      yarn && \
-    npm cache clean --force && \
-    rm -rf /root/.npm
+##  --unsafe-perm work around for npm bug
+#RUN npm install --unsafe-perm -g \
+#      @angular/cli \
+#      azure-cli \
+#      babel-cli bower browser-sync \
+#      cordova cordova-check-plugins \
+#      firebase-tools fuse \
+#      http-server \
+#      iconv-lite \
+#      nodemon npm-check-updates node-gyp \
+#      sass-lint \
+#      semver \
+#      tslint typings typescript \
+#      uglify-js \
+#      webpack webpack-dev-server \
+#      yarn && \
+#    npm cache clean --force && \
+#    rm -rf /root/.npm
 
 # Allows for mounting cloud drives
 RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.zip -O /rclone-current-linux-amd64.zip && \
