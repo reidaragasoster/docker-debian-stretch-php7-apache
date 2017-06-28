@@ -296,8 +296,8 @@ ADD ./files/apache2/sites_config_apache24/web.conf /etc/apache2/sites-available/
 ADD ./files/apache2/sites-available/10_not_a_server.conf /etc/apache2/sites-available/10_not_a_server.conf
 ADD ./files/apache2/new_conf.d /etc/apache2/new_conf.d
 
-ADD ./files/composer/auth.json /root/.composer/auth.json
-ADD ./files/composer/auth.json /site/.composer/auth.json
+#ADD ./files/composer/auth.json /root/.composer/auth.json
+#ADD ./files/composer/auth.json /site/.composer/auth.json
 ADD ./files/start.sh /start.sh
 ADD ./files/supervisord.conf /supervisord.conf
 
