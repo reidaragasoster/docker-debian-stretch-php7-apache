@@ -26,6 +26,6 @@ pipelines:
           # push the new Docker image to the Docker registry
           - docker tag $IMAGE_NAME_COMMIT ${IMAGE_NAME_DATE}
           - docker tag $IMAGE_NAME_COMMIT ${IMAGE_NAME_LATEST}
-          #- docker push $IMAGE_NAME_COMMIT
-          #- docker push ${IMAGE_NAME_DATE}
+          - docker push $IMAGE_NAME_COMMIT
+          - docker push ${IMAGE_NAME_DATE}
           - docker push ${IMAGE_NAME_LATEST}
