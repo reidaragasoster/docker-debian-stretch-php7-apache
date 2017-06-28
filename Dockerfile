@@ -315,7 +315,7 @@ RUN echo 'cd /site/web' >> /site/.bashrc && \
 RUN chmod u+x /start.sh && \
     mkdir -p /run/php
 
-VOLUME ["/site/web", "/var/log"]
+#VOLUME ["/site/web", "/var/log"]
 
 WORKDIR /site/web
 
